@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var a = 25
+        var b = 5
+        var c = "Test"
+        var linebreak = "<br />"
+        document.write("a + b = ")
+        result = a + b
+        document.write(result)
+        document.write(linebreak)
+        result = (a<<3)
+        r = (typeof a == "string" ? "A is a string" : "A is a "+typeof a)
+        document.write(result)
+        document.write(linebreak)
+        document.write(r)
+        document.write(linebreak)
+        function printLineBreak() {
+            document.write(linebreak);
+        }
+        age = 24
+        if(age > 18){
+            document.write("<b>Qualifies for driving</b>")
+        }else {
+            document.write("<b>You are not old enough</b>")
+        }
+        document.write(linebreak)
+        count = 0;
+        while(count < 10){
+            document.write("Current count is : ",count,"<br/>")
+            count ++;
+        }
+        printLineBreak();
+//        for (aProperty in navigator){
+//            document.write(aProperty);
+//            document.write("<br />");
+//        }
+
+        outerloop:
+        for (var i = 0 ; i <3;i++){
+            document.write("Outerloop: "+ i+"<br/>");
+            for (var j = 0;j<5;j++){
+                if(j==3){
+                continue outerloop;
+            }
+                document.write("Innerloop: "+j+"<br />")
+            }
+
+        }
+        document.write("Exiting the loop! <br />")
+    </script>
+</head>
+<body>
+</body>
+
+</html>

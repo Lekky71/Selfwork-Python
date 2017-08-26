@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing java scripts</title>
+</head>
+<body>
+<script type="text/javascript">
+    function hypotenuse(a,b) {
+        function square(a) {return a * a}
+        return Math.sqrt(square(a)+square(b));
+    }
+    var funcTest = new Function("a","b"," document.write(a+b); return a +b;");
+    function mouseOver(){
+        alert("Mouse over");
+    }
+</script>
+
+<input type="button" onclick="alert(hypotenuse(3,4)+funcTest(3,4))"
+       value="Click Me!!!" onmouseover="mouseOver()" ondblclick="">
+<div ondblclick="alert(hypotenuse(2,3))" >
+    <p> This is me </p>
+
+</div>
+</body>
+</html>
